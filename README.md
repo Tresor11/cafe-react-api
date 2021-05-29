@@ -1,4 +1,4 @@
-# Resell-App API
+# Cafe-React API
 
 > This project is an Api for this [React-app](https://resell-app.netlify.app/).
 

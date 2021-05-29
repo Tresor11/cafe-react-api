@@ -1,4 +1,4 @@
 class Item < ApplicationRecord
-  validates_presence_of :name, :price, :type, :image
+  validates_presence_of :name, :price, :category, :image
   mount_uploader :image, ImageUploader
 end

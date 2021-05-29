@@ -11,18 +11,19 @@ class ItemsController < ApplicationController
 
   def show
     @response = {
-      item: @item
+      item: Item.find(params[:id])
     }
     json_response(@response)
   end
 
   def update
-    @item.update!(item_params)
-    json_response(@item)
+    item = Item.find(params[:id])
+    item.update!(item_params)
+    json_response(item)
   end
 
   def destroy
-    @item.destroy
+    Item.find(params[:id]).destroy
     head :no_content
   end
 
@@ -30,9 +31,5 @@ class ItemsController < ApplicationController
 
   def item_params
     params.permit(:name, :category, :price, :image)
-  end
-
-  def item
-    @item = Item.find(params[:id])
   end
 end

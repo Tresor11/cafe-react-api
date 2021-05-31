@@ -4,7 +4,7 @@ RSpec.describe 'Authentication', type: :request do
   # Authentication test suite
   describe '/items endpoint' do
     # create test user
-    let!(:image) { Rack::Test::UploadedFile.new("#{Rails.root}/spec/support/js.png", 'profile') }
+    let!(:image) { Rack::Test::UploadedFile.new("#{Rails.root}/spec/support/js.png", 'image') }
     def item_headers
       {
         'Content-Type' => 'application/json'
